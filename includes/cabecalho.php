@@ -72,9 +72,16 @@ $menu = [
         <p class="dw-subtitulo"><?= htmlspecialchars($subtitulo) ?></p>
       </div>
 
-      <button id="<?= $botaoId ?>" type="button" class="btn dw-btn-atualizar">
-        <?= htmlspecialchars($botaoTexto) ?>
-      </button>
+      <div class="d-flex flex-wrap gap-2">
+        <?php if (isset($botaoExtraId)): ?>
+          <button id="<?= $botaoExtraId ?>" type="button" class="btn dw-btn-secundario dw-btn-cabecalho">
+            <?= htmlspecialchars($botaoExtraTexto) ?>
+          </button>
+        <?php endif; ?>
+        <button id="<?= $botaoId ?>" type="button" class="btn dw-btn-atualizar">
+          <?= htmlspecialchars($botaoTexto) ?>
+        </button>
+      </div>
     </header>
 
     <main class="dw-main">

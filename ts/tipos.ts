@@ -100,6 +100,13 @@ export interface MaterialForm {
     estoque_minimo: number;
 }
 
+export interface LancamentoForm {
+    obra_id: number;
+    material_id: number;
+    quantidade: number;
+    data_aplicacao: string;
+}
+
 export interface FiltroLancamentos {
     inicio: string;
     fim: string;

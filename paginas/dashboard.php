@@ -2,8 +2,10 @@
 $pagina     = 'dashboard';
 $titulo     = 'Materiais aplicados';
 $subtitulo  = 'Consumo de material por obra, lançamento a lançamento.';
-$botaoId    = 'btn-atualizar';
-$botaoTexto = 'Atualizar dados';
+$botaoExtraId    = 'btn-atualizar';
+$botaoExtraTexto = 'Atualizar dados';
+$botaoId    = 'btn-novo';
+$botaoTexto = 'Novo lançamento';
 $fonte      = 'sp_dashboard_lancamentos';
 $script     = 'dashboard';
 
@@ -177,5 +179,47 @@ require __DIR__ . '/../includes/cabecalho.php';
           </nav>
         </footer>
       </section>
+
+      <!-- Desenvolvimento Web Avancada: novo lancamento, so obra em andamento e com baixa no estoque -->
+      <div class="modal fade" id="modal-form" tabindex="-1" aria-labelledby="titulo-form" aria-hidden="true">
+        <div class="modal-dialog">
+          <form id="form-registro" class="modal-content dw-modal" novalidate>
+            <div class="modal-header">
+              <h2 class="modal-title dw-modal-titulo" id="titulo-form">Novo lançamento</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+              <div id="form-erro" class="alert alert-danger py-2 d-none" role="alert"></div>
+              <div class="mb-3">
+                <label for="campo-obra" class="form-label dw-rotulo">Obra em andamento</label>
+                <select id="campo-obra" class="form-select" required>
+                  <option value="">Escolha a obra</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="campo-material" class="form-label dw-rotulo">Material</label>
+                <select id="campo-material" class="form-select" required>
+                  <option value="">Escolha o material</option>
+                </select>
+                <p id="info-material" class="form-text mb-0">O valor unitário vem do cadastro do material.</p>
+              </div>
+              <div class="row g-3">
+                <div class="col-6">
+                  <label for="campo-quantidade" class="form-label dw-rotulo">Quantidade</label>
+                  <input type="number" id="campo-quantidade" class="form-control" min="0.01" step="0.01" required>
+                </div>
+                <div class="col-6">
+                  <label for="campo-data" class="form-label dw-rotulo">Data</label>
+                  <input type="date" id="campo-data" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm dw-btn-secundario" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-sm dw-btn-atualizar">Lançar</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
 <?php require __DIR__ . '/../includes/rodape.php'; ?>

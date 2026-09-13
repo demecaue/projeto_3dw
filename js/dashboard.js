@@ -2,6 +2,7 @@ import { buscarAplicacoes, buscarCategorias, buscarPaginaLancamentos } from './a
 import { clienteMaisLancamentos, filtrarPorCategoria, formatarData, formatarMoeda, formatarNumero, materialMaisLancado, montarBarrasCategoria, montarCriticos, montarIndicadores, montarLinhas, obraMaiorConsumo } from './calculos.js';
 import { carimbarLeitura, celula, criar, elemento, escrever, exibir, linhaMensagem, preencherCampo, preencherSelect, valorCampo } from './dom.js';
 import { badgeEstoque } from './crud.js';
+import { iniciarNovoLancamento } from './lancamento.js';
 const filtro = { inicio: '', fim: '', categoria: '', busca: '', pagina: 1 };
 let aplicacoes = [];
 function botaoOcupado(ocupado) {
@@ -214,6 +215,10 @@ document.addEventListener('DOMContentLoaded', () => {
     void carregarCategorias();
     void carregarPainel(false);
     void carregarTabela();
+    iniciarNovoLancamento(() => {
+        void carregarPainel(true);
+        void carregarTabela();
+    });
     const botao = elemento('btn-atualizar');
     if (botao) {
         botao.addEventListener('click', () => {

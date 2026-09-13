@@ -640,6 +640,13 @@ body {
     --bs-btn-border-radius: var(--dw-raio-sm);
 }
 
+.dw-btn-cabecalho {
+    --bs-btn-font-size: .81rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: .45rem;
+    white-space: nowrap;
+}
+
 .dw-rotulo {
     margin-bottom: .25rem;
     font-family: var(--dw-mono);

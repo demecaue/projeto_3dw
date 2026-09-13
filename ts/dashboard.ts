@@ -36,6 +36,7 @@ import {
     valorCampo
 } from './dom.js';
 import { badgeEstoque } from './crud.js';
+import { iniciarNovoLancamento } from './lancamento.js';
 
 // Tech Forge: arquivo da pagina so liga eventos, chama a busca (api.ts) e depois renderiza
 
@@ -312,6 +313,11 @@ document.addEventListener('DOMContentLoaded', (): void => {
     void carregarCategorias();
     void carregarPainel(false);
     void carregarTabela();
+
+    iniciarNovoLancamento((): void => {
+        void carregarPainel(true);
+        void carregarTabela();
+    });
 
     const botao = elemento('btn-atualizar');
     if (botao) {
