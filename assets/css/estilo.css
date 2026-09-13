@@ -1,3 +1,5 @@
+/* Desenvolvimento Web Avancada: aparencia do sistema, identidade visual aplicada pelas variaveis do Bootstrap */
+
 :root {
     --dw-marinho-900: #002B49;
     --dw-marinho-800: #00365B;
@@ -607,6 +609,262 @@ body {
         height: 30px;
         padding-block: 0;
     }
+}
+
+.dw-btn-secundario {
+    --bs-btn-color: var(--dw-marinho-700);
+    --bs-btn-bg: var(--dw-superficie);
+    --bs-btn-border-color: var(--dw-borda);
+    --bs-btn-hover-color: var(--dw-marinho-900);
+    --bs-btn-hover-bg: var(--dw-superficie-2);
+    --bs-btn-hover-border-color: #C3CFDB;
+    --bs-btn-active-bg: var(--dw-borda-suave);
+    --bs-btn-active-border-color: #C3CFDB;
+    --bs-btn-font-size: .78rem;
+    --bs-btn-font-weight: 500;
+    --bs-btn-border-radius: var(--dw-raio-sm);
+}
+
+.dw-btn-excluir {
+    --bs-btn-color: var(--dw-critico-txt);
+    --bs-btn-bg: var(--dw-superficie);
+    --bs-btn-border-color: rgba(220, 38, 38, .28);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--dw-critico);
+    --bs-btn-hover-border-color: var(--dw-critico);
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: var(--dw-critico-txt);
+    --bs-btn-active-border-color: var(--dw-critico-txt);
+    --bs-btn-font-size: .78rem;
+    --bs-btn-font-weight: 500;
+    --bs-btn-border-radius: var(--dw-raio-sm);
+}
+
+.dw-rotulo {
+    margin-bottom: .25rem;
+    font-family: var(--dw-mono);
+    font-size: .615rem;
+    font-weight: 500;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--dw-texto-2);
+}
+
+.form-control,
+.form-select {
+    --bs-border-radius: var(--dw-raio-sm);
+    border-color: var(--dw-borda);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--dw-turquesa);
+    box-shadow: 0 0 0 .15rem rgba(31, 169, 155, .2);
+}
+
+.dw-filtros {
+    margin-bottom: 1rem;
+    padding: .75rem 1.1rem .85rem;
+}
+
+.dw-main > .dw-alerta {
+    margin-bottom: 0;
+}
+
+.dw-relacao--topo {
+    margin-top: 0;
+}
+
+.dw-tabela--crud {
+    min-width: 760px;
+}
+
+.dw-acoes {
+    white-space: nowrap;
+}
+
+.dw-acoes .btn + .btn {
+    margin-left: .35rem;
+}
+
+.dw-linha-vazia {
+    padding: 1.4rem 1.1rem !important;
+    text-align: center;
+    color: var(--dw-texto-2);
+}
+
+.dw-status--em_andamento {
+    color: var(--dw-azul-600);
+    background: #EFF6FB;
+    border-color: rgba(0, 120, 192, .28);
+}
+
+.dw-status--concluida {
+    color: var(--dw-sucesso-txt);
+    background: var(--dw-sucesso-bg);
+    border-color: rgba(25, 135, 84, .28);
+}
+
+.dw-status--paralisada {
+    color: var(--dw-atencao-txt);
+    background: var(--dw-atencao-bg);
+    border-color: rgba(217, 119, 6, .3);
+}
+
+.dw-blocos {
+    margin-top: 0;
+}
+
+.dw-destaques {
+    margin: 0;
+}
+
+.dw-destaque {
+    padding: .7rem 1.1rem;
+}
+
+.dw-destaque + .dw-destaque {
+    border-top: 1px solid var(--dw-borda-suave);
+}
+
+.dw-destaque dt {
+    font-family: var(--dw-mono);
+    font-size: .615rem;
+    font-weight: 500;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--dw-texto-2);
+}
+
+.dw-destaque dd {
+    margin: .15rem 0 0;
+    font-weight: 500;
+    color: var(--dw-grafite);
+}
+
+.dw-destaque .dw-destaque-sub {
+    margin: 0;
+    font-family: var(--dw-mono);
+    font-size: .72rem;
+    font-weight: 400;
+    color: var(--dw-texto-2);
+}
+
+.dw-barras,
+.dw-criticos {
+    margin: 0;
+    padding: .4rem 1.1rem .8rem;
+    list-style: none;
+}
+
+.dw-barra {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .2rem .75rem;
+    padding-block: .45rem;
+}
+
+.dw-barra-nome {
+    font-size: .79rem;
+    color: var(--dw-grafite);
+}
+
+.dw-barra-numero {
+    font-family: var(--dw-mono);
+    font-size: .74rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--dw-grafite-600);
+}
+
+.dw-barra-trilho {
+    grid-column: 1 / -1;
+    height: 6px;
+    background: var(--dw-superficie-2);
+    border: 1px solid var(--dw-borda-suave);
+    border-radius: var(--dw-raio-sm);
+    overflow: hidden;
+}
+
+.dw-barra-valor {
+    display: block;
+    height: 100%;
+    background: var(--dw-azul-500);
+}
+
+.dw-criticos li {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    padding-block: .45rem;
+    font-size: .79rem;
+    color: var(--dw-grafite);
+}
+
+.dw-criticos li + li {
+    border-top: 1px solid var(--dw-borda-suave);
+}
+
+.dw-criticos .num {
+    font-family: var(--dw-mono);
+    font-size: .72rem;
+    color: var(--dw-critico-txt);
+    white-space: nowrap;
+}
+
+.dw-criticos .dw-lista-vazia {
+    color: var(--dw-texto-2);
+}
+
+.dw-busca {
+    display: flex;
+    gap: .4rem;
+    width: min(100%, 22rem);
+}
+
+.dw-paginacao {
+    --bs-pagination-color: var(--dw-marinho-700);
+    --bs-pagination-bg: var(--dw-superficie);
+    --bs-pagination-border-color: var(--dw-borda);
+    --bs-pagination-hover-color: var(--dw-marinho-900);
+    --bs-pagination-hover-bg: var(--dw-superficie-2);
+    --bs-pagination-focus-box-shadow: none;
+    --bs-pagination-active-bg: var(--dw-marinho-700);
+    --bs-pagination-active-border-color: var(--dw-marinho-700);
+    --bs-pagination-disabled-bg: var(--dw-superficie-2);
+    --bs-pagination-border-radius: var(--dw-raio-sm);
+    font-family: var(--dw-mono);
+}
+
+.dw-modal {
+    --bs-modal-border-color: var(--dw-borda);
+    --bs-modal-border-radius: var(--dw-raio);
+    --bs-modal-header-border-color: var(--dw-borda);
+    --bs-modal-footer-border-color: var(--dw-borda);
+    --bs-modal-footer-bg: var(--dw-superficie-2);
+}
+
+.dw-modal-titulo {
+    font-size: .98rem;
+    font-weight: 600;
+    color: var(--dw-grafite);
+}
+
+.dw-toasts {
+    right: 1rem;
+    bottom: 2.6rem;
+    z-index: 1090;
+}
+
+.dw-toast {
+    --bs-toast-bg: var(--dw-superficie);
+    --bs-toast-border-color: var(--dw-borda);
+    --bs-toast-border-radius: var(--dw-raio);
+    --bs-toast-font-size: .8rem;
+    border-left: 3px solid var(--dw-sucesso);
+}
+
+.dw-toast--erro {
+    border-left-color: var(--dw-critico);
 }
 
 @media (prefers-reduced-motion: reduce) {

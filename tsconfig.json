@@ -1,3 +1,4 @@
+// Tech Forge: integracao com o XAMPP, compilar na raiz com npx -y -p typescript tsc (ts/ vira js/)
 {
     "compilerOptions": {
         "target": "ES2020",

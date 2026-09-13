@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+// Tech Forge: conexao PDO com o MySQL do XAMPP
+
 const DB_HOST  = 'localhost';
 const DB_NOME  = 'projeto_3dw';
 const DB_USER  = 'root';
